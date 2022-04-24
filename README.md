@@ -10,5 +10,8 @@ Guia de instalação:
 
 A aplicação ainda não está 100% funcional devido a faltarem duas funcionalidades importantes "BarCode" e "Sistema de Notificações"; Fora isto,já é possivel adicionar produtos manualmente e verifica-los na sua lista como também na respetiva categoria.<br />
 
-Esta aplicação utiliza uma arquitetura MEAN (MongoDB; Express; Angular; Nodejs), com autenticação através de um token (Json Web Token (JWT))
+Esta aplicação utiliza uma arquitetura MEAN (MongoDB; Express; Angular; Nodejs), com autenticação através de um token (Json Web Token (JWT))<br />
+
+Video da aplicação no youtube: https://youtu.be/gZA_pUfkmVQ
+
 
