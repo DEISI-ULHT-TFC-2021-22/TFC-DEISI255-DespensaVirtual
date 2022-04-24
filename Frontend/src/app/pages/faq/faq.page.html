@@ -1,0 +1,41 @@
+<app-header [title]="title"></app-header>
+
+
+<ion-content>
+
+  <ion-button strong color="hl1" expand="full" (click)="abrirTutorial('tutorial')">
+    <ion-text class="ion-text-left">Tutorial</ion-text>
+    <ion-icon id="tutorialIcon"name="arrow-dropdown" slot="end"></ion-icon>
+  </ion-button>
+
+  <ion-text id="tutorial" hidden="true">
+    [[TUTORIAL ENTRA AQUI]]
+  </ion-text>
+
+  <ion-button strong color="hl1" expand="full" (click)="abrirTutorial('tutorial1')">
+    <ion-text class="ion-text-left">Tutorial</ion-text>
+    <ion-icon id="tutorialIcon"name="arrow-dropdown" slot="end"></ion-icon>
+  </ion-button>
+
+  <ion-text id="tutorial1" hidden="true">
+    [[TUTORIAL ENTRA AQUI]]
+  </ion-text>
+
+  <ion-button strong color="hl1" expand="full" (click)="abrirTutorial('tutorial2')">
+    <ion-text class="ion-text-left">Tutorial</ion-text>
+    <ion-icon id="tutorialIcon"name="arrow-dropdown" slot="end"></ion-icon>
+  </ion-button>
+
+  <ion-text id="tutorial2" hidden="true">
+    [[TUTORIAL ENTRA AQUI]]
+  </ion-text>
+
+  <ion-button (click)="abrirTutorial('tutorial3')" strong color="hl1" expand="full" >
+    <ion-text class="ion-text-left">Tutorial</ion-text>
+    <ion-icon id="tutorialIcon"name="arrow-dropdown" slot="end"></ion-icon>
+  </ion-button>
+
+  <ion-text id="tutorial3" hidden="true">
+    [[TUTORIAL ENTRA AQUI]]
+  </ion-text>
+</ion-content>

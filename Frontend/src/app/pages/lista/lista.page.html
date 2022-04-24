@@ -1,0 +1,140 @@
+<app-header [title]="title"></app-header>
+
+
+
+<ion-toolbar mode="md">
+  <ion-segment mode="md" [(ngModel)]="selectCategoria" scrollable >
+    <ion-segment-button [value]="categoria" *ngFor="let categoria of categorias; let i = index"   (click)="centerButton($event)">
+      
+      <ion-label class="grid" ><img src="{{fotografias[i]}}"  style="width: 7vw; height: 7vw;" /><p style="margin-top: 1vw;">{{ categoria }}</p></ion-label>
+    </ion-segment-button>
+  </ion-segment>
+</ion-toolbar>
+
+
+<ion-content>
+  <div class="ion-padding" *ngIf="selectCategoria == 'Todos'">
+    <ngx-datatable class="bootstrap" [rows]="rows" [columnMode]="'flex'" [headerHeight]="50" [footerHeight]="50"
+      rowHeight="auto" ngClass="tabela">
+      <ngx-datatable-column name="Nome" [flexGrow]=1>
+        <ng-template let-row="row" ngx-datatable-cell-template>
+          <span (click)="openDetail(row?.produto,row?.quantidade,row?.validade)">{{ row?.produto | titlecase }}</span>
+        </ng-template>
+      </ngx-datatable-column>
+      <ngx-datatable-column name="Quantidade" [flexGrow]=0.9>
+        <ng-template let-row="row" ngx-datatable-cell-template>
+          <span (click)="openQuantity(row?.produto,row?.quantidade)">{{ row?.quantidade }}</span>
+        </ng-template>
+      </ngx-datatable-column>
+      <ngx-datatable-column name="Validade" [flexGrow]=0.9>
+        <ng-template let-row="row" ngx-datatable-cell-template>
+          {{ row?.validade }} dias
+        </ng-template>
+      </ngx-datatable-column>
+      <ngx-datatable-column name="Categoria" [flexGrow]=1.2>
+        <ng-template let-row="row" ngx-datatable-cell-template>
+          {{ row?.categoria }}
+        </ng-template>
+      </ngx-datatable-column>
+      <ngx-datatable-column name="Acao" [flexGrow]=0.5 [sortable]="false">
+        <ng-template let-row="row" ngx-datatable-cell-template>
+          <ion-select [ngStyle]="{'background-image': 'url(../../../assets/opcao.png)'}" class="imagem"
+            value="notifications" interface="action-sheet"
+            (ionChange)="clickOption($event,row?.produto,row?.quantidade,row?.validade,row?.categoria)">
+            <ion-select-option value="editar">Editar</ion-select-option>
+            <ion-select-option value="remover">Remover</ion-select-option>
+            <ion-select-option value="listaCompras">Colocar na Lista de Compras</ion-select-option>
+          </ion-select>
+        </ng-template>
+      </ngx-datatable-column>
+    </ngx-datatable>
+  </div>
+
+  <div class="ion-padding" *ngIf="selectCategoria == 'Bebidas'">
+    <ngx-datatable class="bootstrap" [rows]="bebidas" [columnMode]="'flex'" [headerHeight]="50" [footerHeight]="50"
+      rowHeight="auto" ngClass="tabela">
+      <ngx-datatable-column name="Nome" [flexGrow]=1>
+        <ng-template let-row="row" ngx-datatable-cell-template>
+          {{ row?.produto | titlecase }}
+        </ng-template>
+      </ngx-datatable-column>
+      <ngx-datatable-column name="Quantidade" [flexGrow]=1>
+        <ng-template let-row="row" ngx-datatable-cell-template>
+          {{ row?.quantidade }}
+        </ng-template>
+      </ngx-datatable-column>
+      <ngx-datatable-column name="Validade" [flexGrow]=0.9>
+        <ng-template let-row="row" ngx-datatable-cell-template>
+          {{ row?.validade }} dias
+        </ng-template>
+      </ngx-datatable-column>
+      <ngx-datatable-column name="Categoria" [flexGrow]=1>
+        <ng-template let-row="row" ngx-datatable-cell-template>
+          <img src="../../../assets/bebidas.png">
+        </ng-template>
+      </ngx-datatable-column>
+      <ngx-datatable-column name="Acao" [flexGrow]=0.5 [sortable]="false">
+        <ng-template ngx-datatable-cell-template>
+          <img src="../../../assets/opcao.png">
+        </ng-template>
+      </ngx-datatable-column>
+    </ngx-datatable>
+  </div>
+
+  <div class="ion-padding" *ngIf="selectCategoria == 'Talho'">
+    <ngx-datatable class="bootstrap" [rows]="talho" [columnMode]="'flex'" [headerHeight]="50" [footerHeight]="50"
+      rowHeight="auto" ngClass="tabela">
+      <ngx-datatable-column name="Nome" [flexGrow]=1>
+        <ng-template let-row="row" ngx-datatable-cell-template>
+          {{ row?.produto | titlecase }}
+        </ng-template>
+      </ngx-datatable-column>
+      <ngx-datatable-column name="Quantidade" [flexGrow]=1>
+        <ng-template let-row="row" ngx-datatable-cell-template>
+          {{ row?.quantidade }}
+        </ng-template>
+      </ngx-datatable-column>
+      <ngx-datatable-column name="Validade" [flexGrow]=0.9>
+        <ng-template let-row="row" ngx-datatable-cell-template>
+          {{ row?.validade }} dias
+        </ng-template>
+      </ngx-datatable-column>
+      <ngx-datatable-column name="Acao" [flexGrow]=0.5 [sortable]="false">
+        <ng-template ngx-datatable-cell-template>
+          <img src="../../../assets/opcao.png">
+        </ng-template>
+      </ngx-datatable-column>
+    </ngx-datatable>
+  </div>
+
+  <div class="ion-padding" *ngIf="selectCategoria == 'Congelados'">
+    <ngx-datatable class="bootstrap" [rows]="congelados" [columnMode]="'flex'" [headerHeight]="50" [footerHeight]="50"
+      rowHeight="auto" ngClass="tabela">
+      <ngx-datatable-column name="Nome" [flexGrow]=1>
+        <ng-template let-row="row" ngx-datatable-cell-template>
+          {{ row?.produto | titlecase }}
+        </ng-template>
+      </ngx-datatable-column>
+      <ngx-datatable-column name="Quantidade" [flexGrow]=1>
+        <ng-template let-row="row" ngx-datatable-cell-template>
+          {{ row?.quantidade }}
+        </ng-template>
+      </ngx-datatable-column>
+      <ngx-datatable-column name="Validade" [flexGrow]=0.9>
+        <ng-template let-row="row" ngx-datatable-cell-template>
+          {{ row?.validade }} dias
+        </ng-template>
+      </ngx-datatable-column>
+      <ngx-datatable-column name="Categoria" [flexGrow]=1>
+        <ng-template let-row="row" ngx-datatable-cell-template>
+          <img src="../../../assets/congelados.png">
+        </ng-template>
+      </ngx-datatable-column>
+      <ngx-datatable-column name="Acao" [flexGrow]=0.5 [sortable]="false">
+        <ng-template ngx-datatable-cell-template>
+          <img src="../../../assets/opcao.png">
+        </ng-template>
+      </ngx-datatable-column>
+    </ngx-datatable>
+  </div>
+</ion-content>

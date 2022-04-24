@@ -1,0 +1,80 @@
+@media(max-width: 768px) {
+
+ion-content{
+    --ion-background-color:rgb(49, 63, 86);
+}
+
+
+.carta{
+    margin-top: 2vw;
+}
+.img-box {
+    width: 80%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e9e9e9;
+}
+
+.icon{
+    height: 16vw;
+    width: 16vw;
+    color: rgb(49, 63, 86);
+}
+
+.gridd{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    
+}
+.titulo{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-size: large; color: black;
+}
+.ver{
+    display: none;
+}
+
+
+.img-box{
+    height: fit-content;
+}
+}
+
+
+
+@media only screen and (min-height: 844px)
+{
+
+    .titulo{
+        font-size: 6vw;
+    }
+
+    .coluna{
+        height: 105vw;
+    }
+
+   
+    .ver{
+        display: block;
+    }
+
+    .carta{
+        height: 80vw;
+    }
+
+    .subir{
+        margin-top: -5vw;
+    }
+    
+
+    .letraNome{
+        font-size: medium;
+    }
+    
+}

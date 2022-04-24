@@ -1,0 +1,7 @@
+{
+  "name": "despensaVirtual",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

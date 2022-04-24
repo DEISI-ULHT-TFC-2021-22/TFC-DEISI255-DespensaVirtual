@@ -1,0 +1,43 @@
+{
+    "produtos": [
+        {
+            "nome" :  "Água",
+            "quantidade":  "1",
+            "validade":  "false",
+            "categoria": "Bebidas",
+            "imagem": "null"
+        },
+        {
+            "nome" :  "Salsicha",
+            "quantidade": "3" ,
+            "validade":  "false",
+            "categoria": "Outro",
+            "imagem": "null"
+        },
+        {
+            "nome" :  "Maçã",
+            "quantidade": "20" ,
+            "validade":  "false",
+            "categoria": "Fruta",
+            "imagem": "null"
+        },
+        {
+            "nome" :  "Atum",
+            "quantidade": "3" ,
+            "validade":  "false",
+            "categoria": "Outro",
+            "imagem": "null"
+        }
+
+    ],
+    "outros": [
+        {
+            "nome" :  "Água",
+            "quantidade":  "1",
+            "validade":  "false",
+            "categoria": "Bebidas",
+            "imagem": "null"
+        }
+    ]
+    
+}
