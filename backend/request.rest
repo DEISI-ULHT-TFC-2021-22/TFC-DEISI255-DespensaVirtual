@@ -1,0 +1,133 @@
+GET http://localhost:3000/api/special
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyNTk5N2UxM2QwMzY0ODAzNjY5MzJkZCIsImVtYWlsIjoiamltQGdtYWlsLmNvbSIsImlhdCI6MTY1MDAzODc1NSwiZXhwIjoxNjUwMDM4OTU1fQ.3z7Ia7hqfDNutLFtM5pMBosu7_7qrq8fuDI6CQH-Jgo
+
+
+### Done
+POST http://localhost:3000/api/register
+Content-Type: application/json
+
+{
+    "email": "Jim@gmail.com",
+    "password": "123456"
+}
+
+
+
+### Done ( caso ja existe o produto ou não)
+POST http://localhost:3000/api/user/products/create
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyNTk5N2UxM2QwMzY0ODAzNjY5MzJkZCIsImVtYWlsIjoiamltQGdtYWlsLmNvbSIsImlhdCI6MTY1MDY1MDI4NiwiZXhwIjoxNjUwNjUwNDg2fQ.oPqh75Mg6vbTF2hnr44z-UyowpwR6VKRiEqJ5-XhK9I
+Content-Type: application/json
+
+{
+    
+    "produto" : "fruta",
+    "quantidade": 40,
+    "validade": 4,
+    "categoria": "Congelados"
+    
+}
+
+
+### Done 
+GET http://localhost:3000/api/user/products
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyNTk5N2UxM2QwMzY0ODAzNjY5MzJkZCIsImVtYWlsIjoiamltQGdtYWlsLmNvbSIsImlhdCI6MTY1MDExMzIyOCwiZXhwIjoxNjUwMTEzNDI4fQ.t7dde2N--ASynvsu-AfcGj0WlI5xqsSHqNhWqfwgwUw
+
+
+
+### Done
+PUT http://localhost:3000/api/user/products/editQuantidade
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyNTk5N2UxM2QwMzY0ODAzNjY5MzJkZCIsImVtYWlsIjoiamltQGdtYWlsLmNvbSIsImlhdCI6MTY1MDY1MDcxMCwiZXhwIjoxNjUwNjUwOTEwfQ.WIwxSjqark0CeNk1YoOKHPsbDv5c4H8xPoeUnNm-tUE
+Content-Type: application/json
+
+{
+    
+    "produto" : "fruta",
+    "quantidade": 27
+    
+}
+
+
+
+
+### Done
+POST http://localhost:3000/api/user/products/remove
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyNTk5N2UxM2QwMzY0ODAzNjY5MzJkZCIsImVtYWlsIjoiamltQGdtYWlsLmNvbSIsImlhdCI6MTY1MDM4MTkwNCwiZXhwIjoxNjUwMzgyMTA0fQ.RkKhoiYqy2y-EQdnt5OC7CR9_EJvwMN8dBh3p4K22c8
+Content-Type: application/json
+
+{
+    "produto": "dasfa"
+}
+
+
+###
+POST http://localhost:3000/api/user/products/editlist
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyNTk5N2UxM2QwMzY0ODAzNjY5MzJkZCIsImVtYWlsIjoiamltQGdtYWlsLmNvbSIsImlhdCI6MTY1MDY1MDI4NiwiZXhwIjoxNjUwNjUwNDg2fQ.oPqh75Mg6vbTF2hnr44z-UyowpwR6VKRiEqJ5-XhK9I
+Content-Type: application/json
+
+{
+    "produto": "ttt"
+}
+
+
+### Done
+POST http://localhost:3000/api/login
+Content-Type: application/json
+
+{
+    "email": "Jim@gmail.com",
+    "password": "123456"
+}
+
+
+### Fica a faltar o editProduct; tenho de verificar quais os campos que estão com string e quais nao têm para depois colocar dentro
+
+PUT http://localhost:3000/api/user/products/edit
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyNTk5N2UxM2QwMzY0ODAzNjY5MzJkZCIsImVtYWlsIjoiamltQGdtYWlsLmNvbSIsImlhdCI6MTY1MDcyMzE4OSwiZXhwIjoxNjUwNzIzMzg5fQ.2CnhztH--d1DA_sYROLUcVmEL1ONviaH-E39InIUWTU
+Content-Type: application/json
+
+{
+    "produto": "arroz",
+    "validade": 2,
+    "quantidade": 40,
+    "novoNome": "arroz",
+    "categoria": "Outros"
+}
+
+
+###1 - só mudar quantidade
+# {
+    
+#     "produto" : "fruta",
+#     
+#     "validade": 4,
+#     "categoria": "Congelados"
+    
+# }
+            //Modificar só quantidade
+            //Modificar só validade
+            //Modificar só categoria
+            //Modificar só nome
+
+            //Modificar quantidade e validade
+            //Modificar quantidade e nome
+            //Modificar quantidade e categoria
+
+            //Modificar quantidade e categoria e nome
+            //Modificar quantidade e categoria e validade
+            //Modificar quantidade e nome e validade
+            
+            //Modificar validade e nome
+
+
+            //Modificar validade e categoria
+
+            //Modificar validade e categoria e nome 
+
+            
+            //Modificar nome e categoria
+
+
+
+            //Modificar todos
+
+
