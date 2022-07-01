@@ -24,13 +24,8 @@ const ProductSchema = new mongoose.Schema({
     lista_compras: {
         type: Boolean,
     }
-
 })
 
-function getQuantidade() {
-    return (
-        this.quantidade
-    );
-}
+
 
 module.exports = mongoose.model('Product' , ProductSchema)

@@ -1,0 +1,21 @@
+GET http://localhost:3000/api/special
+Authorization:Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyNTgxMjNkNjhkNDBlNGFjYzU5ODY3OSIsImVtYWlsIjoiZnJlZEBob3RtYWlsLmNvbSIsImlhdCI6MTY0OTkzOTAwNiwiZXhwIjoxNjQ5OTM5MjA2fQ.bK5BfjBedfnOAtIZRphgmQnn15Lr3vVBaVpomXh_FNQ
+
+###
+
+POST http://localhost:3000/api/register
+Content-Type: application/json
+
+{
+    "email": "Jim@gmail.com",
+    "password": "123456"
+}
+
+###
+POST http://localhost:3000/api/login
+Content-Type: application/json
+
+{
+    "email": "Jim@gmail.com",
+    "password": "123456"
+}

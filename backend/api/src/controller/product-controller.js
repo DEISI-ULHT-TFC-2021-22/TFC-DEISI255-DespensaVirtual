@@ -4,7 +4,6 @@ var Product = require('../models/product');
 
 
 
-
 exports.addProduct = async (req, res) => {
     //console.log(req.headers.authorization)
     if (req.headers && req.headers.authorization) {
@@ -95,9 +94,11 @@ exports.ProductDelete = async (req, res) => {
 };
 
 exports.ProductEditList = async (req, res) => {
+    console.log("entrei")
     if (req.headers && req.headers.authorization) {
         const produto = await Product.find({ user_id: req.user._id, produto: req.body.produto })
         const lista = produto[0].get('lista_compras')
+        console.log(lista)
         await Product.findOneAndUpdate({ user_id: req.user._id, produto: req.body.produto },
             { lista_compras: !lista }
             , { new: true }).then(
