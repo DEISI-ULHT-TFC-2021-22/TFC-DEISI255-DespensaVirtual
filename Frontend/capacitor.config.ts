@@ -1,8 +1,8 @@
 import { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
-  appId: 'io.ionic.starter',
-  appName: 'despensaVirtual',
+  appId: 'DespensaVirtualFinal',
+  appName: 'despensavirtual',
   webDir: 'www',
   bundledWebRuntime: false
 };
