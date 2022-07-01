@@ -14,7 +14,7 @@
 - @capacitor-community/barcode-scanner
 
 # Âmbito #
-Esta aplicação já inclui a estrutura backend com JWT Login, User Roles e alguns repositório para começar o projeto para uma aplicação client-server.  
+Esta aplicação já inclui a estrutura backend com JWT Login, User Roles e alguns repositório para começar o projeto numa aplicação client-server.  
 Com este código é possível correr facilmente esta aplicação.
 
 
