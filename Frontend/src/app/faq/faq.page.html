@@ -1,0 +1,45 @@
+
+<app-header [title]="title"></app-header>
+
+<ion-content>
+
+  <ion-button strong color="hl1" expand="full" (click)="abrirTutorial('tutorial')">
+    <ion-text class="ion-text-left" style="color: black;">Como inserir um produto ?</ion-text>
+    <ion-icon id="tutorialIcon"name="arrow-dropdown" slot="end"></ion-icon>
+  </ion-button>
+
+  <ion-text id="tutorial" hidden="true" style="color: black;">
+    No menu carregar em Adicionar Produto e de seguida preencher os campos obrigatórios e carregar em adicionar. 
+  </ion-text>
+
+  <ion-button strong color="hl1" expand="full" (click)="abrirTutorial('tutorial1')">
+    <ion-text class="ion-text-left" style="color: black;">Como uitlizar o barCode ?</ion-text>
+    <ion-icon id="tutorialIcon"name="arrow-dropdown" slot="end"></ion-icon>
+  </ion-button>
+
+  <ion-text id="tutorial1" hidden="true" style="color: black;">
+    O barCode pode ser introduzido manualmente ou a partir da câmera. Pode encontrar esta opção em Adicionar Produto 
+    e de seguida carregar no icon que se encontra no canto inferior esquerdo.
+  </ion-text>
+
+  <ion-button strong color="hl1" expand="full" (click)="abrirTutorial('tutorial2')">
+    <ion-text class="ion-text-left" style="color: black;">Como utilizar a Lista de Compras ?</ion-text>
+    <ion-icon id="tutorialIcon"name="arrow-dropdown" slot="end"></ion-icon>
+  </ion-button>
+
+  <ion-text id="tutorial2" hidden="true" style="color: black;">
+    
+    A partir do momento em que o utilizador adiciona um produto, o mesmo é incluido na lista de compras na seção "No carrinho".
+    Assim que o utilizador tem um produto em falta pode realocalo do carrinho para a lista de compras.
+     
+  </ion-text>
+
+  <ion-button (click)="abrirTutorial('tutorial3')" strong color="hl1" expand="full" >
+    <ion-text class="ion-text-left" style="color: black;">Como editar um produto ?</ion-text>
+    <ion-icon id="tutorialIcon"name="arrow-dropdown" slot="end"></ion-icon>
+  </ion-button>
+
+  <ion-text id="tutorial3" hidden="true" style="color: black;">
+    A partir do menu carregar em Lista de Produtos. Dentro da linha de cada produto carregar no campo "ação" aqui encontrará a opção editar produto.
+  </ion-text>
+</ion-content>

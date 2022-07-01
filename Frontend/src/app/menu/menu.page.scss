@@ -1,0 +1,64 @@
+ion-content{
+    --ion-background-color:rgb(49, 63, 86);
+}
+.carta{
+    margin-top: 2vw;
+
+    height: 80vw;
+}
+
+.img-box {
+    width: 80%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e9e9e9;
+}
+.icon{
+    height: 16vw;
+    width: 16vw;
+    color: rgb(49, 63, 86);
+}
+
+.gridd{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.titulo{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    color: black;
+    font-size: 6vw;
+    
+}
+
+
+.ver{
+    display: block;
+}
+
+.coluna{
+    height: 105vw;
+}
+
+
+
+
+.subir{
+    margin-top: -7vw;
+}
+
+
+.letraNome{
+    font-size: medium;
+}
+
+.img-box{
+    height: fit-content;
+}

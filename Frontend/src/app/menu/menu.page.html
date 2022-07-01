@@ -1,0 +1,114 @@
+<ion-content class="fundo" scroll-y="false">
+  <ion-card style="background-color: white;display: flex;
+  justify-content: center;
+  align-items: center; margin-top: 10vw;" class="carta">
+      <ion-grid>
+          <ion-row>
+              <p class="titulo">Bem vindo à sua aplicaçação <br>
+                  "Despensa Virtual"</p>
+          </ion-row>
+          
+
+          <ion-row class="ver">
+                  <ion-card style="background-color: white;">
+                      <img src="../../../assets/Logo.png" style="height: 40; width: 100%;">
+                  </ion-card>
+          </ion-row>
+      </ion-grid>
+
+
+  </ion-card>
+
+
+  <ion-grid>
+      <ion-row>
+          <ion-col sizeLg="3" sizeMd="4" sizeXs="6" class="subir">
+              <ion-card class="img-box" (click)="pageLoginOrSign()">
+                  <ion-grid class="gridd">
+                      <ion-row class="ion-justify-content-center">
+                          <ion-img src="../../../assets/login.png" class="icon"></ion-img>
+                      </ion-row>
+                      <ion-row class="ion-justify-content-center">
+                          <p style="color: rgb(49, 63, 86);" class="letraNome">Sair</p>
+                      </ion-row>
+                  </ion-grid>
+              </ion-card>
+
+          </ion-col>
+
+
+          <ion-col sizeLg="3" sizeMd="4" sizeXs="6" class="subir">
+              <ion-card class="img-box" (click)="pageListas()">
+                  <ion-grid class="gridd">
+                      <ion-row class="ion-justify-content-center">
+                          <ion-img src="../../../assets/despensa.png" class="icon"></ion-img>
+                      </ion-row>
+                      <ion-row class="ion-justify-content-center">
+                          <p style="color: rgb(49, 63, 86);" class="letraNome">Lista de Produtos</p>
+                      </ion-row>
+                  </ion-grid>
+              </ion-card>
+
+          </ion-col>
+
+          <ion-col sizeLg="4" sizeMd="4" sizeXs="6" class="subir">
+              <ion-card class="img-box" (click)="pageCompras()">
+                  <ion-grid class="gridd">
+                      <ion-row class="ion-justify-content-center">
+                          <ion-img src="../../../assets/carroCompras.png" class="icon"></ion-img>
+                      </ion-row>
+                      <ion-row class="ion-justify-content-center">
+                          <p style="color: rgb(49, 63, 86);" class="letraNome">Lista de Compras</p>
+                      </ion-row>
+                  </ion-grid>
+              </ion-card>
+
+          </ion-col>
+
+          <ion-col sizeLg="4" sizeMd="4" sizeXs="6" class="subir">
+              <ion-card class="img-box" (click)="pageAdiconarProduto()">
+                  <ion-grid class="gridd">
+                      <ion-row class="ion-justify-content-center">
+                        <ion-img src="../../../assets/addp.png" class="icon"></ion-img>
+                      </ion-row>
+                      <ion-row class="ion-justify-content-center">
+                          <p style="color: rgb(49, 63, 86);" class="letraNome">Adicionar Produto</p>
+                      </ion-row>
+                  </ion-grid>
+              </ion-card>
+
+          </ion-col>
+          <ion-col sizeLg="4" sizeMd="4" sizeXs="6" class="subir">
+              <ion-card class="img-box" (click)="pageFaq()">
+                  <ion-grid class="gridd">
+                      <ion-row class="ion-justify-content-center">
+                          <ion-img src="../../../assets/info.png" class="icon"></ion-img>
+                      </ion-row>
+                      <ion-row class="ion-justify-content-center">
+                          <p style="color: rgb(49, 63, 86);" class="letraNome">FAQ</p>
+                      </ion-row>
+                  </ion-grid>
+              </ion-card>
+
+          </ion-col>
+          <ion-col sizeLg="4" sizeMd="4" sizeXs="6" class="subir">
+              <ion-card class="img-box" (click)="pageConf()">
+                  <ion-grid class="gridd">
+                      <ion-row class="ion-justify-content-center">
+                        <ion-img src="../../../assets/sett.png" class="icon"></ion-img>
+                    </ion-row>
+                      <ion-row class="ion-justify-content-center">
+                          <p style="color: rgb(49, 63, 86);" class="letraNome">Configurações</p>
+                      </ion-row>
+                  </ion-grid>
+              </ion-card>
+
+          </ion-col>
+
+
+      </ion-row>
+
+
+  </ion-grid>
+
+</ion-content>

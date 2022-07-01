@@ -1,8 +1,6 @@
 // Ionic Variables and Theming. For more info, please see:
 // http://ionicframework.com/docs/theming/
 
-@import '~@swimlane/ngx-datatable/index.css';
-@import '~@swimlane/ngx-datatable/themes/material.scss';
 /** Ionic CSS Variables **/
 :root {
   /** primary **/
@@ -235,24 +233,4 @@
 
     --ion-card-background: #1e1e1e;
   }
-
-
-  .datatable-header-cell { 
-    text-align: left; 
-    padding: .15rem 1.2rem; 
-    color: black;
-    font-size: 2.5vw; 
-}
-
-.datatable-body-cell { 
-  text-align: center; 
-  padding: .1rem 1.2rem; 
-  font-weight: 400; 
-  color: rgb(49, 63, 86);
-  vertical-align: bottom; 
-  font-size: 3vw; 
-  font-weight: 500;
-}
-
-
 }

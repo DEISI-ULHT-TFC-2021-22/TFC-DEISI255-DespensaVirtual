@@ -1,0 +1,31 @@
+@media(min-width: 768px) {
+    .mobile-header {
+      display: none;
+    }
+
+    
+   
+
+}
+   
+
+
+
+
+@media(max-width: 768px) {
+    .mobile-header {
+      display: block;
+    }
+    .toolbar-background-color{
+        --background:rgb(49, 63, 86);
+
+    }
+
+    #menu{
+      background-color: rgb(49, 63, 86);
+    }
+    
+}
+   
+   
+ 

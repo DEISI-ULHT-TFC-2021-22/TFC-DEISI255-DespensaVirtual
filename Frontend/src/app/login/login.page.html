@@ -1,0 +1,30 @@
+<ion-header class="mobile-header">
+  <ion-toolbar  class="toolbar-background-color" >
+    <ion-title style="text-align: center; margin-top: 2vw; color: white;">{{ title }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content padding>
+  <ion-card style="background-color: white;">
+    <img src="../../../assets/Logo.png" class="center">
+    <ion-card-header>
+    </ion-card-header>
+  </ion-card>
+  <form [formGroup]="credentialsForm" >
+ 
+    <ion-item class="item-background-color1">
+      <ion-label position="floating" style="color: rgb(49, 63, 86);">Email</ion-label>
+      <ion-input type="email" formControlName="email" style="color: rgb(49, 63, 86);"></ion-input>
+    </ion-item>
+ 
+    <ion-item class="item-background-color1">
+      <ion-label position="floating"  style="color: rgb(49, 63, 86);">Password</ion-label>
+      <ion-input type="password" formControlName="password"  style="color: rgb(49, 63, 86);"></ion-input>
+    </ion-item>
+ 
+    <ion-button expand="full" type="submit" (click)="onSubmit()" [disabled]="!credentialsForm.valid">Login</ion-button>
+    <ion-button expand="full" type="submit" (click)="register()" [disabled]="!credentialsForm.valid">Register</ion-button>
+    
+  </form>
+</ion-content>

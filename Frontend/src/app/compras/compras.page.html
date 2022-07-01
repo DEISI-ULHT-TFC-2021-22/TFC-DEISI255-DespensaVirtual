@@ -1,0 +1,62 @@
+
+<app-header [title]="title"></app-header>
+
+
+<ion-content>
+  <div>
+    <h2 style="color:black;">Lista de Compras</h2>
+  <ngx-datatable class="bootstrap" [rows]="listaCompra" [columnMode]="'flex'" [headerHeight]="50" [footerHeight]="30"
+  rowHeight="auto" ngClass="tabela " style="color: black;">
+
+
+  <ngx-datatable-column id="something" name="Nome" [flexGrow]=1 >
+    <ng-template let-row="row" ngx-datatable-cell-template>
+      <span>{{ row?.produto | titlecase }}</span>
+    </ng-template>
+  </ngx-datatable-column>
+  <ngx-datatable-column name="Categoria" [flexGrow]=1.2>
+    <ng-template let-row="row" ngx-datatable-cell-template>
+      {{ row?.categoria }}
+    </ng-template>
+  </ngx-datatable-column>
+  <ngx-datatable-column name="Acao" [flexGrow]=0.5 [sortable]="false">
+    <ng-template let-row="row" ngx-datatable-cell-template>
+
+      <ion-toggle slot="start" name="blueberry" checked={row?.lista_compras}
+      name="setting" (click)="change(row?.produto,row?.lista_compras)">
+      </ion-toggle>
+    </ng-template>
+  </ngx-datatable-column>
+
+
+</ngx-datatable>
+</div>
+
+<div>
+  <h2 style="color:black;">No carrinho</h2>
+<ngx-datatable class="bootstrap" [rows]="foraLista" [columnMode]="'flex'" [headerHeight]="50" [footerHeight]="0"
+  rowHeight="auto" ngClass="tabela" style="color: black;" >
+  <ngx-datatable-column name="Nome" [flexGrow]=1>
+    <ng-template let-row="row" ngx-datatable-cell-template>
+      <span>{{ row?.produto | titlecase }}</span>
+    </ng-template>
+  </ngx-datatable-column>
+  <ngx-datatable-column name="Categoria" [flexGrow]=1.2>
+    <ng-template let-row="row" ngx-datatable-cell-template>
+      {{ row?.categoria }}
+    </ng-template>
+  </ngx-datatable-column>
+  <ngx-datatable-column name="Acao" [flexGrow]=0.5 [sortable]="false">
+    <ng-template let-row="row" ngx-datatable-cell-template>
+
+      <ion-toggle class="falso" slot="start" name="blueberry" checked={row?.lista_compras}
+      (click)="change(row?.produto,row?.lista_compras )">
+      </ion-toggle>
+
+      
+    </ng-template>
+  </ngx-datatable-column>
+</ngx-datatable>
+</div>
+
+</ion-content>

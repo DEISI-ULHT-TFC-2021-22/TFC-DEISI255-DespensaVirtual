@@ -16,6 +16,7 @@ export class AuthService {
 
   httpOptions = {
     headers: new HttpHeaders({
+      "Authorization": "Bearer "
     })
   };
   url = environment.api_url;
@@ -46,7 +47,7 @@ export class AuthService {
   }
 
   register(credentials) {
-    return this.http.post("http://localhost:3000/api/register", credentials).pipe(
+    return this.http.post(`${ this.url }/register`, credentials).pipe(
       catchError(e => {
         //console.log(credentials)
         this.showAlert(e.error.msg);
@@ -60,6 +61,8 @@ export class AuthService {
     return this.http.post(`${ this.url }/login`, credentials)
       .pipe(
         tap(res => {
+          console.log('Entrei')
+
           this.storage.set(TOKEN_KEY, res['token']);
           this.httpOptions.headers = new HttpHeaders()
             .set('Content-Type', 'application/json')
@@ -73,6 +76,7 @@ export class AuthService {
           this.showAlert1('O seu login foi realizado com sucesso', 'Bem vindo')
         }),
         catchError(e => {
+          console.log('Nao entrei')
           this.showAlert(e.error.msg);
           throw new Error(e);
         })
@@ -105,6 +109,7 @@ export class AuthService {
 
 
   getProducts() {
+    console.log(this.httpOptions)
     //console.log(this.user)
     //console.log(this.storage.get('access_token'))
     //console.log(this.httpOptions)
@@ -190,18 +195,27 @@ export class AuthService {
 
   changeProductList(product) {
     console.log(this.httpOptions)
-
     return this.http.put(`${ this.url }/user/products/editList`, product, this.httpOptions)
       .pipe(
-        map(n => {
-          this.showAlert1('O produto foi editado', 'Sucesso')
-        }),
         catchError(e => {
           console.log("Falhou3")
           this.showAlert(e.error.msg);
           throw new Error(e);
         })
       )
+  }
+
+
+  receberNome(product) {
+    console.log(product)
+    return this.http.post(`${ this.url }/user/products/barcode`, product)
+    .pipe(
+      catchError(e => {
+        console.log("Falhou4")
+        this.showAlert(e.error.msg);
+        throw new Error(e);
+      })
+    )
   }
 
   showAlert(msg) {
