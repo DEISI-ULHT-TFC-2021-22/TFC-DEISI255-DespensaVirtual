@@ -32,6 +32,6 @@ Estou a utilizar a MongoDb que é uma Base de dados não relacional.
 
 Esta aplicação utiliza uma arquitetura MEAN (MongoDB; Express; Angular; Nodejs), com autenticação através de um token (Json Web Token (JWT))<br />
 
-Video da aplicação no youtube: https://youtu.be/gZA_pUfkmVQ
+Video da aplicação no youtube: https://youtu.be/X22WAYRNB48
 
 
